@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Интерактивный тест — Треугольники</title>
+<style>
+:root{--navy:#183b63;--blue:#2e6597;--line:#d6dee8;--bg:#f3f6fa;--text:#202b38;--green:#e7f6ec;--greenb:#238447;--red:#fff0ef;--redb:#c83d36;--amber:#fff7df;--amberb:#b7791f}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 Arial,sans-serif}
+main{width:min(900px,calc(100% - 28px));margin:28px auto 48px}
+header{background:var(--navy);color:white;padding:24px;border-radius:16px 16px 0 0}
+h1{font-size:clamp(22px,4vw,30px);margin:0 0 6px}
+header p{margin:0;color:#e3edf7}
+.sheet{background:white;padding:clamp(16px,4vw,30px);border-radius:0 0 16px 16px;box-shadow:0 8px 28px #17324d12}
+.section-title{font-weight:700;color:var(--navy);margin:4px 0 12px;font-size:18px}
+.task{border:1px solid var(--line);border-radius:10px;padding:15px;margin:10px 0;background:#fff}
+.task p{margin:0 0 10px}
+.num{font-weight:700;color:var(--navy);margin-right:5px}
+.answer{display:inline-block;min-width:145px;max-width:100%;width:190px;padding:8px 10px;border:1.5px solid #aab8c8;border-radius:7px;font:inherit;background:#fff;color:var(--text);vertical-align:middle}
+.answer:focus{outline:3px solid #2e659733;border-color:var(--blue)}
+.answer.wide{width:min(100%,300px)}
+.task.correct{background:var(--green);border-color:var(--greenb)}
+.task.wrong{background:var(--red);border-color:var(--redb)}
+.task.empty{background:var(--amber);border-color:var(--amberb)}
+.verdict{font-size:14px;font-weight:700;margin-top:8px}
+.correct .verdict{color:var(--greenb)}.wrong .verdict{color:var(--redb)}.empty .verdict{color:var(--amberb)}
+.choices{display:flex;gap:18px;flex-wrap:wrap}
+.choice{display:flex;align-items:center;gap:7px;cursor:pointer}
+.choice input{width:18px;height:18px;accent-color:var(--blue)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 12px}
+button{border:0;border-radius:8px;padding:11px 18px;font:700 15px Arial;cursor:pointer}
+#check{background:var(--navy);color:white}
+#reset{background:#e7edf4;color:var(--navy)}
+button:hover{filter:brightness(.96)}
+#result{display:none;border:1px solid var(--line);border-radius:10px;padding:16px;margin-top:16px;background:#f8fafc}
+#result strong{font-size:20px;color:var(--navy)}
+#result p{margin:5px 0 0}
+.note{font-size:13px;color:#647386;margin-top:16px}
+@media(max-width:520px){main{width:calc(100% - 16px);margin:8px auto 24px}.task{padding:12px}.answer{width:100%;margin-top:6px}.answer.inline{width:min(100%,220px)}}
+</style>
+</head>
+<body>
+<main>
+<header>
+<h1>Треугольники</h1>
+<p>Интерактивный тест · 11 заданий</p>
+</header>
+<div class="sheet">
+<div class="section-title">Вставьте пропущенное слово.</div>
+
+<div class="task" data-id="1" data-type="text" data-answers="треугольником">
+<p><span class="num">1)</span> Геометрическая фигура, которая состоит из трёх точек, не лежащих на одной прямой, и трёх отрезков, их соединяющих, называется</p>
+<input class="answer wide" aria-label="Ответ на задание 1" autocomplete="off">
+<div class="verdict" aria-live="polite"></div>
+</div>
+
+<div class="task" data-id="2" data-type="text" data-answers="периметр">
+<p><span class="num">2)</span> <input class="answer inline" aria-label="Ответ на задание 2" autocomplete="off"> — это сумма длин сторон треугольника.</p>
+<div class="verdict" aria-live="polite"></div>
+</div>
+
+<div class="task" data-id="3" data-type="text" data-answers="равны">
+<p><span class="num">3)</span> Если два треугольника можно наложить один на другой так, чтобы они полностью совместились: вершины с вершинами, стороны со сторонами, углы с углами, то эти треугольники</p>
+<input class="answer wide" aria-label="Ответ на задание 3" autocomplete="off">
+<div class="verdict" aria-live="polite"></div>
+</div>
+
+<div class="task" data-id="4" data-type="text" data-answers="равные">
+<p><span class="num">4)</span> В равных треугольниках против соответственно равных углов лежат</p>
+<input class="answer wide" aria-label="Ответ на задание 4" autocomplete="off"> стороны.
+<div class="verdict" aria-live="polite"></div>
+</div>
+
+<div class="task" data-id="5" data-type="text" data-answers="равные">
+<p><span class="num">5)</span> В равных треугольниках против соответственно равных сторон лежат</p>
+<input class="answer wide" aria-label="Ответ на задание 5" autocomplete="off"> углы.
+<div class="verdict" aria-live="polite"></div>
+</div>
+
+<div class="section-title" style="margin-top:26px">Определите, верно ли утверждение.</div>
+<div class="task" data-id="6" data-type="choice" data-answer="да">
+<p><span class="num">6)</span> У каждого треугольника три угла.</p>
+<div class="choices"><label class="choice"><input type="radio" name="q6" value="да"> Да</label><label class="choice"><input type="radio" name="q6" value="нет"> Нет</label></div>
+<div class="verdict" aria-live="polite"></div>
+</div>
+<div class="task" data-id="7" data-type="choice" data-answer="да">
+<p><span class="num">7)</span> У любого треугольника три стороны.</p>
+<div class="choices"><label class="choice"><input type="radio" name="q7" value="да"> Да</label><label class="choice"><input type="radio" name="q7" value="нет"> Нет</label></div>
+<div class="verdict" aria-live="polite"></div>
+</div>
+<div class="task" data-id="8" data-type="choice" data-answer="нет">
+<p><span class="num">8)</span> У треугольника четыре вершины.</p>
+<div class="choices"><label class="choice"><input type="radio" name="q8" value="да"> Да</label><label class="choice"><input type="radio" name="q8" value="нет"> Нет</label></div>
+<div class="verdict" aria-live="polite"></div>
+</div>
+<div class="task" data-id="9" data-type="choice" data-answer="да">
+<p><span class="num">9)</span> У равных треугольников периметры равны.</p>
+<div class="choices"><label class="choice"><input type="radio" name="q9" value="да"> Да</label><label class="choice"><input type="radio" name="q9" value="нет"> Нет</label></div>
+<div class="verdict" aria-live="polite"></div>
+</div>
+<div class="task" data-id="10" data-type="choice" data-answer="нет">
+<p><span class="num">10)</span> Если периметры двух треугольников равны, то и треугольники равны.</p>
+<div class="choices"><label class="choice"><input type="radio" name="q10" value="да"> Да</label><label class="choice"><input type="radio" name="q10" value="нет"> Нет</label></div>
+<div class="verdict" aria-live="polite"></div>
+</div>
+<div class="task" data-id="11" data-type="choice" data-answer="нет">
+<p><span class="num">11)</span> Два треугольника равны, если они имеют одинаковую форму.</p>
+<div class="choices"><label class="choice"><input type="radio" name="q11" value="да"> Да</label><label class="choice"><input type="radio" name="q11" value="нет"> Нет</label></div>
+<div class="verdict" aria-live="polite"></div>
+</div>
+
+<div class="actions">
+<button id="check" type="button">Проверить ответы</button>
+<button id="reset" type="button">Сбросить</button>
+</div>
+<div id="result" role="status" aria-live="polite"></div>
+<p class="note">После проверки правильные ответы отмечаются зелёным, ошибки — красным, пропуски — жёлтым.</p>
+</div>
+</main>
+<script>
+const tasks = [...document.querySelectorAll('.task')];
+const normalize = s => s.toLocaleLowerCase('ru').replace(/ё/g,'е').replace(/[.,;:!?]/g,'').trim().replace(/\s+/g,' ');
+function checkAnswers(){
+  let correct=0, empty=0;
+  tasks.forEach(task=>{
+    task.classList.remove('correct','wrong','empty');
+    const verdict=task.querySelector('.verdict');
+    let value='';
+    if(task.dataset.type==='text'){
+      value=task.querySelector('input').value;
+    }else{
+      value=task.querySelector('input[type="radio"]:checked')?.value || '';
+    }
+    if(!normalize(value)){
+      empty++; task.classList.add('empty');
+      verdict.textContent='Ответ не заполнен.';
+      return;
+    }
+    const accepted=task.dataset.type==='text'
+      ? task.dataset.answers.split('|').map(normalize)
+      : [task.dataset.answer];
+    if(accepted.includes(normalize(value))){
+      correct++; task.classList.add('correct');
+      verdict.textContent='Верно.';
+    }else{
+      task.classList.add('wrong');
+      const right=task.dataset.type==='text' ? accepted[0] : task.dataset.answer;
+      verdict.textContent='Неверно. Правильный ответ: '+(task.dataset.type==='text' ? right : (right==='да'?'Да':'Нет'))+'.';
+    }
+  });
+  const result=document.getElementById('result');
+  result.style.display='block';
+  result.innerHTML='<strong>Результат: '+correct+' из '+tasks.length+'</strong><p>Правильных ответов: '+correct+'. Ошибок: '+(tasks.length-correct-empty)+'. Не заполнено: '+empty+'.</p>';
+  result.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function resetTest(){
+  tasks.forEach(task=>{
+    task.classList.remove('correct','wrong','empty');
+    task.querySelectorAll('input').forEach(input=>{
+      if(input.type==='radio') input.checked=false; else input.value='';
+    });
+    task.querySelector('.verdict').textContent='';
+  });
+  const result=document.getElementById('result');
+  result.style.display='none'; result.textContent='';
+}
+document.getElementById('check').addEventListener('click',checkAnswers);
+document.getElementById('reset').addEventListener('click',resetTest);
+</script>
+</body>
+</html>
